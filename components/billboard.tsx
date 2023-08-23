@@ -1,4 +1,4 @@
-import { Billboard, Billboard as BillboardType } from "@/types";
+import { Billboard as BillboardType } from "@/types";
 
 interface BillboardProps {
   data: BillboardType;
