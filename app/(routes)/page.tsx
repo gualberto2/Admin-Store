@@ -1,11 +1,11 @@
-import getBillboard from "@/actions/get-billboards";
+import getBillboards from "@/actions/get-billboards";
 import Billboard from "@/components/billboard";
 import Container from "@/components/ui/container";
 
 export const revalidate = 0;
 
 const HomePage = async () => {
-  const billboard = await getBillboard("54162fba-7c4d-490e-804d-2e2afd65983b");
+  const billboard = await getBillboards("54162fba-7c4d-490e-804d-2e2afd65983b");
   return (
     <Container>
       <div className="space-y-10 pb-10">
