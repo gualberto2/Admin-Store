@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { forwardRef } from "react";
 
 export interface ButtonProps
@@ -11,7 +12,22 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   ...props,
 }, ref)=>{
     return(
-        <button className="" ref={ref}>
+        <button className={cn(
+            `
+            w-auto
+            rounded-full
+            bg-black
+            border-transparent
+            px-5
+            py-3
+            disabled:cursor-not-allowed
+            disabled:opacity-50 first-letter:text-white
+            font-semibold
+            hover:opacity-75
+            transition
+            `, 
+            className
+        )} ref={ref}>
 {children}
         </button>
     )
