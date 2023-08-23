@@ -6,9 +6,9 @@ const URL = `${process.env.NEXT_PUBLIC_API_URL}/products`;
 
 interface Query {
   categoryId?: string;
-  colorId: string;
-  sizeId: string;
-  isFeatured: boolean;
+  colorId?: string;
+  sizeId?: string;
+  isFeatured?: boolean;
 }
 
 const getProducts = async (query: Query): Promise<Product[]> => {
@@ -22,6 +22,7 @@ const getProducts = async (query: Query): Promise<Product[]> => {
     },
   });
   const res = await fetch(URL);
+
   return res.json();
 };
 
