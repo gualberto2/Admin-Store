@@ -29,7 +29,7 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
 
     // If valueKey is equal to the id then that means the user clicked on the filter that is currently active meaning they wanna get rid of that filter
     if (current[valueKey] === id) {
-      query[valuekey] = null;
+      query[valueKey] = null;
     }
 
     const url = qs.stringifyUrl(
